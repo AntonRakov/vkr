@@ -1,0 +1,693 @@
+/* Базовый сброс стилей */
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Сброс стилей ссылок */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Сброс стилей элементов списка */
+li{
+    list-style-type: none;
+}
+
+/* Спойлер на JQuery */
+.spoiler-wrap{
+    background:#fff;
+    margin: 0 0 8px;
+    border:1px solid #efefef;
+    width: 60%;
+    margin-left: 20%;
+}
+.spoiler-head{
+    background:#efefef;
+    cursor:pointer;
+    padding:5px;
+}
+.spoiler-body{
+    padding:10px
+}
+.spoiler-wrap.disabled .spoiler-body{
+    display:none
+}
+.spoiler-wrap.active{
+    border-color:#014d55
+}
+.spoiler-wrap.active .spoiler-head{
+    background:#014d55;
+    color:#fff;
+}
+
+/* Шапка */
+header{
+    background-image: url(../images/home-three-1-1920x800.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/* Меню */
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    color: #242423;
+    text-transform: uppercase;
+    padding: 30px;
+    letter-spacing: .1em;
+    font-size: 14px;
+    font-family: 'Merriweather', serif; 
+    text-align: center;
+}
+
+/* Левый блок меню */
+.menu_left{
+    width: 30%;
+    margin-left: 20%;
+}
+
+/* Список меню - левая часть*/
+.menu_left ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Блок меню с логотипом */
+.menu_center{
+    width: 20%;
+}
+
+/* Логотип в шапке */
+.menu_center img{
+    display: block;
+    margin: auto;
+}
+
+/* Правый блок меню */
+.menu_right{
+    width: 30%;
+    margin-right: 20%;
+}
+
+/* Список меню - правая часть */
+.menu_right ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Шапка - нижняя часть */
+.header_bottom{
+    padding: 5% 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header_bottom h1{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0.67em 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 0.972;
+    font-size: 72px;
+}
+
+.header_bottom p{
+    color: #999;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    line-height: 27px;
+    margin-top: 38px;
+}
+
+/* Кнопка записаться сейчас */
+.header_bottom a{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.75;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 2px solid;
+    transition: .3s ease-out;
+    padding: 13px 33px;
+    font-size: 14px;
+    color: #fff;
+    background: #014d55;
+    border-color: #014d55;
+    border-radius: 35px;
+    min-width: 200px;
+    margin-top: 50px;
+}
+
+/* Ссылка в шапки при наведении */
+.header_bottom a:hover{
+    background-color: black;
+    border-color: black;
+}
+
+/* Первый блок */
+.block1{
+    display: flex;
+    flex-direction: row;
+    background-color: #F5F8F9;
+    padding: 8vw 0;
+}
+
+/* Первый блок - левая часть */
+.block1 .left_block{
+    width: 50vw;
+    flex-direction: row;
+}
+
+.block1 .left_block img{
+    height: auto;
+    max-width: 14vw;
+    padding-right: 2vw;
+}
+
+/* Первый блок - правая часть */
+.block1 .right_block{
+    width: 50vw;
+}
+
+/* Кнопка читать больше */
+.block1 .right_block a{
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.8;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 2px solid;
+    transition: .3s ease-out;
+    color: #fff;
+    background: #014d55;
+    border-color: #014d55;
+    font-size: 12px;
+    padding: 8px 28px;
+    border-radius: 35px;
+    min-width: 200px;
+    margin-top: 50px;
+}
+
+/* Кнопка читать больше при наведении */
+.block1 .right_block a:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.block1 .right_block .text_block{
+    width: 30vw;
+    margin: 3vw;
+}
+
+.block1 .right_block .text_block h2{
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    line-height: 1.33333;
+    font-size: 36px;
+    padding-bottom: 1vw;
+}
+
+.block1 .right_block .text_block p{
+    color: #999;
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    width: 100%;
+    pointer-events: auto;
+    max-width: 370px;
+}
+
+.block2{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #F5F8F9; */
+    /* padding: 8vw 0; */
+}
+
+.block2 .left_block{
+    width: 27vw;
+}
+
+.block2 .left_block{
+    background-image: url(../images/home-three-2-910x800.jpg);
+    background-size: cover;
+    padding: 10vw 10vw 10vw 13vw;
+}
+
+.block2 .left_block h2{
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    line-height: 1.33333;
+    font-size: 36px;
+}
+
+.block2 .left_block p{
+    color: #999;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 28px;
+}
+
+.block2 .left_block a{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 1.75;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 2px solid;
+    transition: .3s ease-out;
+    padding: 13px 33px;
+    font-size: 14px;
+    border-radius: 35px;
+    min-width: 200px;
+    outline: 0;
+    margin-top: 50px;
+    color: #fff;
+    background: #014d55;
+    border-color: #014d55;
+}
+
+.block2 .left_block a:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.block2 .right_block{
+    width: 50vw;
+    background-image: url(../images/home-three-3-1011x800.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Merriweather', serif; 
+    text-align: center;
+}
+
+.block2 .right_block a{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.block2 .right_block p{
+    font-size: 14px;
+    color: white;
+}
+
+#beard_trim{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#beard_trim img{
+    margin: auto;
+    height: 62px;
+    width: 70px;
+}
+
+#mustache_trim{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#mustache_trim img{
+    margin: auto;
+    height: 62px;
+    width: 70px;
+}
+
+#traditional_haircuts{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#traditional_haircuts img{
+    margin: auto;
+    height: 62px;
+    width: 70px;
+}
+
+#shaves{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: 5%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#shaves img{
+    margin: auto;
+    height: 62px;
+    width: 70px;
+}
+
+/* shop page */
+/* Второе меню */
+
+.second-menu{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    color: #242423;
+    text-transform: uppercase;
+    padding: 30px;
+    letter-spacing: .1em;
+    font-size: 14px;
+    font-family: 'Merriweather', serif; 
+}
+
+.second-menu ul{
+    display: flex;
+}
+
+.second-menu ul li{
+    padding: 0 10vh;
+}
+
+.page-title{
+    background-image: url(../images/bg-image-title.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+}
+
+.page-title h1{
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 72px;
+    padding: 10vw 10vh;
+}
+
+/* Модальное окно */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin: 50% 0 0 -300px;
+  position: relative;
+  top: 50%; 
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  /* border-radius: 15px; */
+}
+
+.modal-wrapper.open .modal {
+  margin-top: -200px;
+  opacity: 1;
+}
+
+.head { 
+  width: 90%;
+  height: 32px;
+  padding: 12px 30px;
+  overflow: hidden;
+  background: #014d55;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 26px;
+  color: #fff;
+  letter-spacing: .05em;
+  /* border-radius: 15px 15px 0 0; */
+}
+
+.btn-close {
+  font-size: 28px;
+  display: block;
+  float: right;
+  color: #fff;
+}
+
+.content {
+  padding: 5%;
+}
+
+.good-job {
+  text-align: center;
+  font-family: 'Montserrat', Arial,       Helvetica, sans-serif;
+  color: #000;
+  font-size: 24px;
+}
+
+.good-job form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.good-job .fa-thumbs-o-up {
+  font-size: 60px;
+}
+.good-job h1 {
+  font-size: 45px;
+}
+
+.good-job p{
+    margin: 3% 0 1% 0;
+}
+
+.input_text{
+    width: 50%;
+    font-size: 20px;
+    padding: 3px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 25% 0 25%;
+}
+
+#submit_form{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.75;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 2px solid;
+    transition: .3s ease-out;
+    padding: 13px 33px;
+    font-size: 14px;
+    color: #fff;
+    background: #014d55;
+    border-color: #014d55;
+    border-radius: 35px;
+    min-width: 200px;
+    margin: 50px 25% 0 25%;
+}
+
+/* Конец модального окна */
+
+.admin_panel{
+    /* background-color: #F5F8F9; */
+    background-image: url(../images/home-three-1-1920x800.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 101vh;
+}
+
+.admin_panel h1{
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0.67em 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0;
+    line-height: 0.972;
+    font-size: 72px;
+}
+
+#logout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 40%;
+
+}
+
+#logout a{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.75;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    border: 2px solid;
+    transition: .3s ease-out;
+    padding: 6px 30px;
+    font-size: 10px;
+    color: #fff;
+    background: #014d55;
+    border-color: #014d55;
+    border-radius: 35px;
+    margin-top: 20px;
+}
+
+/* Таблицы в админке */
+
+table {
+	border-collapse: collapse;
+	font-family: Futura, Arial, sans-serif;
+	border: 1px solid #777;
+    width: 95%;
+    margin: auto;
+}
+caption {
+	font-size: larger;
+	margin: 1em auto;
+}
+th, td { padding: .65em; }
+th, thead {
+	background: #000;
+	color: #fff;
+	border: 1px solid #000;
+}
+tr:nth-child(odd) {
+	background: rgba(0, 0, 0, 0.08);
+}
+tr:hover {
+	background: rgba(0, 0, 0, 0.2);
+} 
+td {
+	border-right: 1px solid #777;
+}
+
+/* Таблицы в админке конец */
+
+.auth_page{
+    background-image: url(../images/home-three-1-1920x800.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.auth_form{
+    width: 30%;
+    padding: 5% 35% 0 35%;
+}
+
+.auth_form h2{
+    text-align: center;
+    padding-bottom: 1%;
+}
