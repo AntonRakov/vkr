@@ -9,7 +9,7 @@
 	<meta http-equiv="refresh" content="0;URL=lk.php" />
 
 <?php else : ?>
-	<?php 
+	<?php
 
 		$data = $_POST;
 		if ( isset($data['do_login']) )
@@ -51,18 +51,10 @@
     <main class="auth_page">
         <div class="second-menu">
             <ul>
-                <li>
-                    <a href="index.php">Главная</a>
-                </li>
-                <li>
-                    <a href="about.html">О нас</a>
-                </li>
-                <li>
-                    <a href="shop.html">Ассортимент товаров</a>
-                </li>
-                <li>
-                    <a href="lk.php">Личный кабинет</a>
-                </li>
+                <li><a href="tel:+79028842458">+79028842458</a></li>
+                <li><a href="index.php">Главная</a></li>
+                <li><a href="lk.php">Личный кабинет</a></li>
+                <li>Мира 2В</li>
             </ul>
         </div>
         <div class="auth_form">

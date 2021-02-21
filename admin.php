@@ -51,24 +51,20 @@
         <div class="spoiler-wrap disabled">
             <div class="spoiler-head">Клиенты</div>
             <div class="spoiler-body">
-                <table>
+            <table>
                     <tr>
                         <td>#</td>
                         <td>Имя</td>
                         <td>Номер телефона</td>
-                        <td>Скидка</td>
                     </tr>
                     <?php
-                        $users = R::findAll('clients');
+                        $users = R::find('users', ' access_level < 1 ');
                         foreach ($users as $item){
-                            if($item['access_level'] == 0){
-                                echo"<tr>";
-                                    echo"<td>" . $item['id'] . "</td>";
-                                    echo"<td>" . $item['fio'] . "</td>";
-                                    echo"<td>" . $item['phone_number'] . "</td>";
-                                    echo"<td>" . $item['discount'] . "%</td>";
-                                echo"</tr>";
-                            }    
+                            echo"<tr>";
+                                echo"<td>" . $item['id'] . "</td>";
+                                echo"<td>" . $item['name'] . "</td>";
+                                echo"<td>" . $item['phone_number'] . "</td>";
+                            echo"</tr>";   
                         }
                     ?> 
                 </table>
@@ -171,9 +167,10 @@
                         <td>Имя</td>
                         <td>Номер телефона</td>
                         <td>Уровень доступа</td>
+                        <td>Действия</td>
                     </tr>
                     <?php
-                        $users = R::findAll('users');
+                        $users = R::find('users', ' access_level > 0 ');
                         foreach ($users as $item){
                             echo"<tr>";
                                 echo"<td>" . $item['id'] . "</td>";
@@ -185,6 +182,7 @@
                                 if($item['access_level'] == 2){
                                     echo"<td>Администратор</td>";
                                 }
+                                echo"<td><a href='php/delete.php?id=". $item['id'] ."&table=users'>Удалить</a></td>";
                             echo"</tr>";   
                         }
                     ?> 
@@ -255,7 +253,12 @@
                             </tr>
                             <tr>
                                 <td><strong>Уровень доступа</strong></td>
-                                <td><input type="text" name="access_level" value="<?php echo @$data['access_level']; ?>"></td>
+                                <td><select name="access_level">
+                                        <option value="0">Пользователь</option>
+                                        <option value="1">Менеджер</option>
+                                        <option value="2">Администратор</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td colspan="2"><button type="submit" name="do_signup">Продолжить регистрацию</button></td>

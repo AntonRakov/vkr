@@ -18,8 +18,8 @@
             <div class="menu">
                 <div class="menu_left">
                     <ul>
+                        <li><a href="tel:+79028842458">+79028842458</a></li>
                         <li><a href="#">Главная</a></li>
-                        <li><a href="about.html">О нас</a></li>
                     </ul>
                 </div>
                 <div class="menu_center">
@@ -27,8 +27,8 @@
                 </div>
                 <div class="menu_right">
                     <ul>
-                        <li><a href="shop.html">Ассортимент товарров</a></li>
                         <li><a href="lk.php">Личный кабинет</a></li>
+                        <li>Мира 2В</li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     <div class="text_block">
                         <h2>Кто мы такие</h2>
                         <p>Парикмахерская-это команда высококвалифицированных парикмахеров, специализирующихся на предоставлении наилучшей стоимости. Мы делаем это, предоставляя высококачественные салонные услуги.</p>
-                        <a href="about.html">Читать больше</a>
+                        <a href="about.html" class="btn trigger">Узнать больше</a>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="left_block">
                     <h2>Наш <br/> сервис</h2>
                     <p>Парикмахерская предлагает мужские стрижки мирового класса, стрижку бороды и бритье горячей бритвой. Вот лишь некоторые из услуг, которыми мы славимся.</p>
-                    <a href="about.html">Читать больше</a>
+                    <a href="about.html" class="btn trigger">Узнать больше</a>
                 </div>
                 <div class="right_block">
                     <div id="beard_trim">
@@ -136,6 +136,7 @@
             </div>
             </div>
         </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa5a5a41b4c5755a46c19cd550aca0567d335f7185e8896558c909f2e7617676e&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
     </div>
 </body>
 </html>
