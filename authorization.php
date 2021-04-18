@@ -75,6 +75,9 @@
                         <tr>
                             <td colspan="2"><button type="submit" name="do_login">Войти</button></td>
                         </tr>
+                        <tr>
+                            <td colspan="2" class="singup_link"><a href="singup.php">Создать аккаунт</a></td>
+                        </tr>
                         <?php
                         if ( ! empty($errors) )
                         {

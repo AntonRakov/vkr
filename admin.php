@@ -46,7 +46,35 @@
         </div>
         <div class="spoiler-wrap disabled">
             <div class="spoiler-head">Записи</div>
-            <div class="spoiler-body">Текст</div>
+            <div class="spoiler-body">
+                <table>
+                    <tr>
+                        <td>#</td>
+                        <td>Клиент</td>
+                        <td>Номер телефона</td>
+                        <td>Дата</td>
+                        <td>Время</td>
+                        <td>Мастер</td>
+                        <td>Услуга</td>
+                        <td>Действия</td>
+                    </tr>
+                    <?php
+                        $records = R::getAll('CALL `CountEndDay`');
+                        foreach ($records as $item){
+                            echo"<tr>";
+                                echo"<td>" . $item['id'] . "</td>";
+                                echo"<td>" . $item['name'] . "</td>";
+                                echo"<td>" . $item['phone_number'] . "</td>";
+                                echo"<td>" . $item['day'] . "</td>";
+                                echo"<td>" . $item['timing'] . "</td>";
+                                echo"<td>" . $item['fio'] . "</td>";
+                                echo"<td>" . $item['service'] . "</td>";
+                                echo"<td><a href='php/delete.php?id=". $item['id'] ."&table=records'>Удалить</a></td>";
+                            echo"</tr>";
+                        } 
+                    ?> 
+                </table>
+            </div>
         </div>
         <div class="spoiler-wrap disabled">
             <div class="spoiler-head">Клиенты</div>
