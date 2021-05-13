@@ -672,6 +672,10 @@ td {
 	border-right: 1px solid #777;
 }
 
+td:hover{
+    background-color: #DADADA;
+}
+
 /* Таблицы в админке конец */
 
 .auth_page{

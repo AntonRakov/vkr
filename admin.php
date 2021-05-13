@@ -51,7 +51,6 @@
                     <tr>
                         <td>#</td>
                         <td>Клиент</td>
-                        <td>Номер телефона</td>
                         <td>Дата</td>
                         <td>Время</td>
                         <td>Мастер</td>
@@ -59,15 +58,22 @@
                         <td>Действия</td>
                     </tr>
                     <?php
-                        $records = R::getAll('CALL `CountEndDay`');
+                        $records = R::findAll('records',' ORDER BY date_record, time_record' );
                         foreach ($records as $item){
+                            $client = R::findOne('users', "id = ?", array($item['client']));
+                            $client = $client['name'];
+                            $date_record = R::findOne('days', "id = ?", array($item['date_record']));
+                            $date_record = $date_record['day'];
+                            $time_record = R::findOne('times', "id = ?", array($item['time_record']));
+                            $time_record = $time_record['timing'];
+                            $master = R::findOne('masters', "id = ?", array($item['master']));
+                            $master = $master['fio'];
                             echo"<tr>";
                                 echo"<td>" . $item['id'] . "</td>";
-                                echo"<td>" . $item['name'] . "</td>";
-                                echo"<td>" . $item['phone_number'] . "</td>";
-                                echo"<td>" . $item['day'] . "</td>";
-                                echo"<td>" . $item['timing'] . "</td>";
-                                echo"<td>" . $item['fio'] . "</td>";
+                                echo"<td>" . $client . "</td>";
+                                echo"<td>" . $date_record . "</td>";
+                                echo"<td>" . $time_record . "</td>";
+                                echo"<td>" . $master . "</td>";
                                 echo"<td>" . $item['service'] . "</td>";
                                 echo"<td><a href='php/delete.php?id=". $item['id'] ."&table=records'>Удалить</a></td>";
                             echo"</tr>";
