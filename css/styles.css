@@ -357,7 +357,7 @@ header{
     display: flex;
     width: 40%;
     height: 40%;
-    margin: 5%;
+    padding: 5%;
     justify-content: center;
     flex-direction: column;
 }
@@ -372,7 +372,7 @@ header{
     display: flex;
     width: 40%;
     height: 40%;
-    margin: 5%;
+    padding: 5%;
     justify-content: center;
     flex-direction: column;
 }
@@ -387,7 +387,7 @@ header{
     display: flex;
     width: 40%;
     height: 40%;
-    margin: 5%;
+    padding: 5%;
     justify-content: center;
     flex-direction: column;
 }
@@ -402,7 +402,7 @@ header{
     display: flex;
     width: 40%;
     height: 40%;
-    margin: 5%;
+    padding: 5%;
     justify-content: center;
     flex-direction: column;
 }
